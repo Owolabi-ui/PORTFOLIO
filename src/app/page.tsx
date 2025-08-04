@@ -17,13 +17,7 @@ const AboutIcon = () => (
   </svg>
 );
 
-const PortfolioIcon = () => (
-  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-    <circle cx="8.5" cy="8.5" r="1.5"/>
-    <polyline points="21,15 16,10 5,21"/>
-  </svg>
-);
+// Portfolio icon removed as it's not used
 
 const ServicesIcon = () => (
   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
@@ -265,6 +259,7 @@ export default function Home() {
         alert('Failed to send message. Please try again.');
       }
     } catch (error) {
+      console.error('Error sending message:', error);
       alert('Error sending message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -329,8 +324,9 @@ export default function Home() {
     , "-=0.7");
 
     // Animate sections on scroll
-    gsap.utils.toArray('.animate-on-scroll').forEach((element: any) => {
-      gsap.fromTo(element,
+    gsap.utils.toArray('.animate-on-scroll').forEach((element: unknown) => {
+      const el = element as Element;
+      gsap.fromTo(el,
         { y: 50, opacity: 0 },
         {
           y: 0,
@@ -338,7 +334,7 @@ export default function Home() {
           duration: 1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: element,
+            trigger: el,
             start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play none none reverse"
@@ -423,7 +419,7 @@ export default function Home() {
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
         <div className="container mx-auto px-6 text-center relative z-10">
           <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6" style={{color: isDarkMode ? 'white' : '#1f2937'}}>
-            Hello, I'm Owolabi
+            Hello, I&apos;m Owolabi
           </h1>
           <p className="hero-subtitle text-lg sm:text-xl md:text-2xl mb-6 md:mb-8" style={{color: isDarkMode ? 'white' : '#374151'}}>
             Full-Stack Developer & Graphic Designer
@@ -454,7 +450,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6" style={{color: isDarkMode ? 'white' : '#111827'}}>Full-Stack Developer & Creative Designer</h3>
               <p className="mb-4 md:mb-6 leading-relaxed text-sm md:text-base" style={{color: isDarkMode ? 'white' : '#374151'}}>
-                I'm a passionate developer with expertise in modern web technologies and a creative eye for design. 
+                I&apos;m a passionate developer with expertise in modern web technologies and a creative eye for design. 
                 My journey spans from building high-performance web applications with Next.js and Node.js to creating 
                 stunning visual designs with CorelDRAW and Photoshop.
               </p>

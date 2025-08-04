@@ -31,6 +31,7 @@ export const ContactForm: React.FC = () => {
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.error('Error sending message:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -50,7 +51,7 @@ export const ContactForm: React.FC = () => {
       
       {submitStatus === 'success' && (
         <div className="mb-4 p-3 bg-green-500/20 border border-green-500 rounded text-green-300 text-sm">
-          Message sent successfully! I'll get back to you soon.
+          Message sent successfully! I&apos;ll get back to you soon.
         </div>
       )}
       

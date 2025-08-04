@@ -10,7 +10,7 @@ export const useGSAPAnimations = () => {
   const headingsRef = useRef<HTMLHeadingElement[]>([]);
   const outerWrappersRef = useRef<HTMLDivElement[]>([]);
   const innerWrappersRef = useRef<HTMLDivElement[]>([]);
-  const splitHeadingsRef = useRef<any[]>([]);
+  const splitHeadingsRef = useRef<SplitText[]>([]);
   const animatingRef = useRef(false);
   const currentIndexRef = useRef(-1);
   const carouselRef = useRef<HTMLDivElement | null>(null);
