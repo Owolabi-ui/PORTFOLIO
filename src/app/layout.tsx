@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "My fullstack portfolio showcasing projects, skills, and contact information.",
+  title: "Ezekiel Owolabi | Full Stack Developer & Designer",
+  description:
+    "Portfolio of Ezekiel Owolabi, a full-stack developer and graphic designer building polished digital experiences.",
 };
 
 export default function RootLayout({
@@ -24,10 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

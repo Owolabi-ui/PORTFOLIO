@@ -1,74 +1,78 @@
-// data/portfolioData.ts
 export interface PortfolioItem {
   id: number;
   title: string;
-  category: string;
+  category: "Web Dev" | "Graphics";
   image: string;
   tech: string[];
   description: string;
   liveUrl?: string;
   codeUrl?: string;
+  accent?: string;
 }
 
 export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Graphics2Prints Platform",
     category: "Web Dev",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
-    tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-    description: "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Features include real-time updates, advanced search, and mobile optimization.",
-    liveUrl: "https://ecommerce-demo.com",
-    codeUrl: "https://github.com/owolabi-ui/ecommerce"
+    image: "/images/web-projects/landing-page.png",
+    tech: ["Next.js", "Node.js", "MongoDB", "Tailwind"],
+    description:
+      "A complete print services platform with product browsing, custom order flows, and a clean admin experience built for speed and clarity.",
+    liveUrl: "https://graphics2prints.com",
+    codeUrl: "https://github.com/Owolabi-ui/Graphics2Prints",
+    accent: "E-commerce",
   },
   {
     id: 2,
-    title: "Brand Identity Design",
-    category: "Graphics",
-    image: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea",
-    tech: ["CorelDRAW", "Photoshop", "Illustrator"],
-    description: "Complete brand identity package including logo design, color palette, typography selection, and comprehensive brand guidelines for a tech startup.",
-    liveUrl: "https://behance.net/project",
-    codeUrl: ""
+    title: "DOA Prints",
+    category: "Web Dev",
+    image: "/images/web-projects/doa-prints/loading-page.png",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind"],
+    description:
+      "Modern marketing website for a print business with polished storytelling, conversion-focused sections, and responsive layouts.",
+    liveUrl: "https://doaprints.vercel.app/",
+    codeUrl: "https://github.com/Owolabi-ui/doaprints",
+    accent: "Brand website",
   },
   {
     id: 3,
-    title: "Performance CLI Tool",
-    category: "Rust",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
-    tech: ["Rust", "WebAssembly", "Tokio"],
-    description: "High-performance command-line tool for file processing and data transformation. Compiled to WebAssembly for browser integration with 10x faster processing than JavaScript alternatives.",
-    liveUrl: "",
-    codeUrl: "https://github.com/owolabi-ui/rust-cli"
+    title: "Corporate Logo Collection",
+    category: "Graphics",
+    image: "/images/logos/corporate-logo.jpg",
+    tech: ["CorelDRAW", "Photoshop"],
+    description:
+      "Brand-focused logo systems designed to help businesses stand out with clean, memorable and professional visual identities.",
+    accent: "Branding",
   },
   {
     id: 4,
-    title: "Restaurant Website",
-    category: "Web Dev",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
-    tech: ["React", "TypeScript", "Firebase"],
-    description: "Modern restaurant website with online ordering system, table reservation, menu management, and real-time order tracking. Includes admin panel for restaurant staff.",
-    liveUrl: "https://restaurant-demo.com",
-    codeUrl: "https://github.com/owolabi-ui/restaurant-app"
+    title: "Marketing Brochure",
+    category: "Graphics",
+    image: "/images/brochure/brochure-1.jpg",
+    tech: ["CorelDRAW", "Photoshop"],
+    description:
+      "High-impact brochure design balancing structured product storytelling, typography and visual hierarchy for marketing campaigns.",
+    accent: "Print design",
   },
   {
     id: 5,
-    title: "Logo Collection",
+    title: "Professional Business Cards",
     category: "Graphics",
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d",
-    tech: ["Illustrator", "CorelDRAW", "After Effects"],
-    description: "Collection of modern, minimalist logos for various tech startups and businesses. Each design includes multiple variations, color schemes, and animated versions.",
-    liveUrl: "https://dribbble.com/logos",
-    codeUrl: ""
+    image: "/images/business-cards/business-card-1.jpg",
+    tech: ["CorelDRAW", "Photoshop"],
+    description:
+      "Custom business card designs that blend premium layout, thoughtful branding and a polished presentation for modern professionals.",
+    accent: "Stationery",
   },
   {
     id: 6,
-    title: "Web Scraper",
-    category: "Rust",
-    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a",
-    tech: ["Rust", "Tokio", "Reqwest"],
-    description: "Asynchronous web scraper built with Rust for high-performance data extraction. Features rate limiting, proxy support, and data export to multiple formats.",
-    liveUrl: "",
-    codeUrl: "https://github.com/owolabi-ui/web-scraper"
+    title: "Trifold Brochure Design",
+    category: "Graphics",
+    image: "/images/trifold/trifold-front-1.jpg",
+    tech: ["CorelDRAW", "Photoshop"],
+    description:
+      "Strategic trifold layouts built to communicate value clearly while keeping the brochure visually engaging and easy to scan.",
+    accent: "Marketing collateral",
   },
 ];
